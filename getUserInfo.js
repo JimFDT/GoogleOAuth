@@ -18,7 +18,7 @@ function getUserInfo(idToken) {
     json: true
   }
   return request(options).then((parsedBody) => {
-    console.log("parsedBody:", parsedBody);
+    // console.log("parsedBody:", parsedBody);
     if (parsedBody.hd === undefined || parsedBody.hd !== "findata.com.tw") {
       throw `userName:${parsedBody.name} ,email : ${parsedBody.email} is not Findata User`
     }
